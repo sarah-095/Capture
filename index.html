@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0,
+user-scalable=no;" />
+<script type="text/javascript" charset="utf-8"
+src="phonegap.js"></script>
+<script type="text/javascript" charset="utf-8">
+function onBodyLoad() {
+document.addEventListener("deviceready",onDeviceReady,
+false);
+}
+function alertDismissed() {
+navigator.notification.alert("Hola Fabiola");
+}
+function onConfirm(buttonIndex) {
+alert('Haz seleccionado ' + buttonIndex);
+navigator.notification.confirm("Aceptar");
+}
+function onPrompt() {
+navigator.notification.prompt("Escribe tu nombre", ['Ok'], 'Fabiola');
+}
+function onBeep() {
+navigator.notification.beep(5);
+}
+</script>
+</head>
+<body onload="onBodyLoad()">
+<h1>Notificaciones</h1>
+<p>This is a sample PhoneGap application.</p>
+</body>
+</html>
